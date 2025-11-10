@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Alina & Alfredo — 22 Nov 2025</title>
 <meta name="description" content="Wedding of Alina & Alfredo — November 22, 2025. Schedule, directions, dress code, accommodation, gallery, and RSVP." />
+<meta property="og:title" content="Alina & Alfredo — 22 Nov 2025" />
+<meta property="og:description" content="Join us in Saltillo on November 22, 2025." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://raw.githubusercontent.com/Alf101010/IMAGESWEDDING/refs/heads/main/ALINAALF7.jfif" />
+<meta name="theme-color" content="#c9432e" />
 <style>
   :root{
     /* Palette */
@@ -14,24 +19,17 @@
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;scroll-behavior:smooth}
   a{color:inherit;text-decoration:none}
+  a:focus-visible, button:focus-visible, .btn:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
 
   /* Safe-area aware container with roomier sides */
-  .wrap{
-    max-width:1040px;
-    margin:auto;
-    padding-left: clamp(24px, 5vw, 56px);
-    padding-right: clamp(24px, 5vw, 56px);
-  }
+  .wrap{ max-width:1040px; margin:auto; padding-left: clamp(24px, 5vw, 56px); padding-right: clamp(24px, 5vw, 56px); }
   @supports (padding: max(0px)) {
-    .wrap{
-      padding-left: max(clamp(24px, 5vw, 56px), env(safe-area-inset-left));
-      padding-right: max(clamp(24px, 5vw, 56px), env(safe-area-inset-right));
-    }
+    .wrap{ padding-left: max(clamp(24px, 5vw, 56px), env(safe-area-inset-left)); padding-right: max(clamp(24px, 5vw, 56px), env(safe-area-inset-right)); }
   }
 
   /* --- Global responsive helpers --- */
-  img,iframe{max-width:100%;height:auto;border:0}               /* fluid media */
-  .embed-16x9{position:relative; width:100%; aspect-ratio:16/9}  /* responsive iframe wrapper */
+  img,iframe{max-width:100%;height:auto;border:0}
+  .embed-16x9{position:relative; width:100%; aspect-ratio:16/9}
   .embed-16x9 iframe{position:absolute; inset:0; width:100%; height:100%}
 
   /* Header */
@@ -49,11 +47,7 @@
                radial-gradient(1200px 400px at 50% -40%, #fff, var(--paper));
     border-bottom:1px solid var(--edge);
   }
-  .hero-inner{
-    display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;
-    /* IMPORTANT: only top/bottom padding so .wrap's side padding survives */
-    padding-block:56px;
-  }
+  .hero-inner{ display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center; padding-block:32px; }
   .hero h1{font-family:"Brush Script MT",cursive; font-size:clamp(40px, 12vw, 100px); line-height:1.05; margin:0}
   .hero .date{margin-top:12px;color:var(--muted);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
   .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--ink);border-radius:999px}
@@ -102,31 +96,33 @@
   label span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
   input,select,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;font:inherit;outline:none}
   input:focus,select:focus,textarea:focus{border-color:#bbb;box-shadow:0 0 0 3px rgba(0,0,0,.05)}
-  .help{font-size:12px;color:var(--a43b2b)}
   .note{font-size:13px;color:var(--muted)}
   .success{padding:12px;border:1px solid #cce7d0;background:#f0fbf2;color:#234d2d;border-radius:10px}
   footer{padding:42px 0;border-top:1px solid #eee;color:var(--muted);text-align:center}
 
+  /* Dress code chips & swatches */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+  .chip{border:1px solid var(--edge);background:var(--paper);padding:8px 12px;border-radius:999px;font-size:14px}
+  .swatches{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+  .swatch{width:26px;height:26px;border-radius:6px;border:1px solid #d7d7d7}
+  .do{border-left:4px solid #25a244;padding-left:10px}
+  .dont{border-left:4px solid #c1121f;padding-left:10px}
+  details{border:1px solid #eee;border-radius:12px;padding:12px}
+  summary{cursor:pointer;font-weight:600}
+
+  /* Add-to-calendar */
+  .addcal{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
   /* --- Mobile Tweaks --- */
-  @media (max-width:960px){
-    .hero-inner{grid-template-columns:1fr; padding-block:40px}
-    .grid.cols-3{grid-template-columns:1fr 1fr}
-  }
-  @media (max-width:700px){
-    .row{grid-template-columns:1fr}
-  }
-  @media (max-width:640px){
-    :root{ --space:40px }
-    .menu{display:none}
-    .grid.cols-2,.grid.cols-3{grid-template-columns:1fr}
-    .tile{min-width:56px}
-    .num{font-size:24px}
-    .hero .date{font-size:12px}
-    .hero h1{font-size:clamp(36px,11vw,88px); text-wrap:balance;}
-  }
+  @media (max-width:960px){ .hero-inner{grid-template-columns:1fr; padding-block:40px} .grid.cols-3{grid-template-columns:1fr 1fr} }
+  @media (max-width:700px){ .row{grid-template-columns:1fr} }
+  @media (max-width:640px){ :root{ --space:40px } .menu{display:none} .grid.cols-2,.grid.cols-3{grid-template-columns:1fr} .tile{min-width:56px} .num{font-size:24px} .hero .date{font-size:12px} .hero h1{font-size:clamp(36px,11vw,88px); text-wrap:balance;} }
+
+  @media (prefers-reduced-motion: reduce){ .btn:hover, .cta:hover{transform:none} }
 </style>
 </head>
 <body>
+<a href="#main" class="visually-hidden-focusable" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
 <!-- Spotify embed (responsive) -->
 <div class="wrap" style="margin:20px auto">
@@ -140,10 +136,10 @@
   </div>
 </div>
 
-<header>
+<header role="banner">
   <div class="wrap nav">
     <div class="brand"><b>Alina</b> & <b>Alfredo</b></div>
-    <nav class="menu">
+    <nav class="menu" aria-label="Primary">
       <a href="#schedule">Schedule</a>
       <a href="#directions">Directions</a>
       <a href="#dress">Dress&nbsp;Code</a>
@@ -153,17 +149,15 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-labelledby="h-hero">
   <div class="wrap hero-inner">
     <div>
-      <h1>Alina & Alfredo</h1>
-
-      <div class="tag">We’re getting married!</div>
+      <h1 id="h-hero">Alina & Alfredo</h1>
 
       <p style="margin:10px 0 0;color:var(--muted)">
-        Together with their families, Alina & Alfredo invite you to celebrate their marriage.
+        Together with their families, invite you to celebrate their marriage.
       </p>
 
       <div class="date">November 22, 2025 • Saltillo, Mexico</div>
@@ -179,28 +173,32 @@
       <p style="margin:14px 0 0">
         <a class="cta" href="#rsvp">Reply now</a>
       </p>
+      <div class="addcal" aria-label="Add to calendar">
+        <a class="chip" href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0AURL:https://example.com%0ADTSTART:20251122T230000Z%0ADTEND:20251123T050000Z%0ASUMMARY:Alina%20%26%20Alfredo%20Wedding%0ALOCATION:Saltillo%2C%20Mexico%0ADESCRIPTION:We%20can%E2%80%99t%20wait%20to%20celebrate%20with%20you!%0AEND:VEVENT%0AEND:VCALENDAR" download="Alina-Alfredo-Wedding.ics">Add to Calendar</a>
+      </div>
     </div>
     <div class="hero-img" role="img" aria-label="Couple photo"></div>
   </div>
 </section>
   
   <!-- SCHEDULE (centered, stack) -->
-  <section id="schedule" style="text-align:center;">
+  <section id="schedule" style="text-align:center;" aria-labelledby="h-schedule">
     <div class="wrap">
-      <h2>Schedule</h2>
-      <div style="margin-top:2rem;">
-        <div style="margin-bottom:2rem;">
-          <div style="font-size:2.5rem; margin-bottom:0.5rem;">🏛</div>
+      <h2 id="h-schedule">Schedule</h2>
+      <p class="note">All times are local (GMT-6).</p>
+      <div style="margin-top:2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:720px;margin-inline:auto">
+        <div class="card" aria-label="Ceremony">
+          <div style="font-size:2rem; margin-bottom:.25rem;" aria-hidden>🏛</div>
           <b>Ceremony</b><br>
           <span style="color:#5e5e5e;">4:00 PM</span>
         </div>
-        <div style="margin-bottom:2rem;">
-          <div style="font-size:2.5rem; margin-bottom:0.5rem;">🥂</div>
+        <div class="card" aria-label="Cocktail Hour">
+          <div style="font-size:2rem; margin-bottom:.25rem;" aria-hidden>🥂</div>
           <b>Cocktail Hour</b><br>
           <span style="color:#5e5e5e;">5:30 PM</span>
         </div>
-        <div>
-          <div style="font-size:2.5rem; margin-bottom:0.5rem;">🎉</div>
+        <div class="card" aria-label="Reception">
+          <div style="font-size:2rem; margin-bottom:.25rem;" aria-hidden>🎉</div>
           <b>Reception</b><br>
           <span style="color:#5e5e5e;">8:00 PM</span>
         </div>
@@ -209,16 +207,16 @@
   </section>
 
   <!-- DIRECTIONS / MAPS (responsive iframes) -->
-  <section id="directions">
+  <section id="directions" aria-labelledby="h-directions">
     <div class="wrap">
-      <h2>Directions</h2>
+      <h2 id="h-directions">Directions</h2>
 
       <p class="lead">Reception Venue: <b>Il Mercato — Salón Ejecutivo</b></p>
       <div class="card" style="margin-bottom:12px">
         <a class="btn primary" target="_blank" rel="noopener" href="https://maps.google.com/?q=Il%20Mercato%20Saltillo">Open in Google Maps</a>
       </div>
       <div class="embed-16x9" style="margin-bottom:24px">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.5006671892456!2d-100.98469482466508!3d25.454952321212552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86886d4cc03ce86d%3A0xe7a6b55bcd18c3e2!2sIl%20Mercato%20Gentiloni!5e0!3m2!1ses-419!2smx!4v1757744293998!5m2!1ses-419!2smx"
+        <iframe title="Map to Il Mercato" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.5006671892456!2d-100.98469482466508!3d25.454952321212552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86886d4cc03ce86d%3A0xe7a6b55bcd18c3e2!2sIl%20Mercato%20Gentiloni!5e0!3m2!1ses-419!2smx!4v1757744293998!5m2!1ses-419!2smx"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
 
@@ -227,51 +225,70 @@
         <a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/CHZ1TzCM925LEqPAA">Open in Google Maps</a>
       </div>
       <div class="embed-16x9">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.5378905524053!2d-100.99015322466609!3d25.420274622629186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868872b6b9d2673d%3A0x8fe088cb8dc1ab34!2sJos%C3%A9%20Mar%C3%ADa%20LaFragua%20641%2C%20Santa%20Lucia%2C%20Zona%20Centro%2C%2025000%20Saltillo%2C%20Coah.!5e0!3m2!1ses-419!2smx!4v1757744155058!5m2!1ses-419!2smx"
+        <iframe title="Map to Civil Ceremony" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.5378905524053!2d-100.99015322466609!3d25.420274622629186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868872b6b9d2673d%3A0x8fe088cb8dc1ab34!2sJos%C3%A9%20Mar%C3%ADa%20LaFragua%20641%2C%20Santa%20Lucia%2C%20Zona%20Centro%2C%2025000%20Saltillo%2C%20Coah.!5e0!3m2!1ses-419!2smx!4v1757744155058!5m2!1ses-419!2smx"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <!-- DRESS CODE -->
-  <section id="dress">
+  <!-- DRESS CODE (improved) -->
+  <section id="dress" aria-labelledby="h-dress">
     <div class="wrap">
-      <h2>Dress Code</h2>
-      <p class="lead">We kindly invite our guests to dress in formal evening attire. All events take place indoors.</p>
+      <h2 id="h-dress">Dress Code</h2>
+      <p class="lead">Formal evening attire. All events are indoors.</p>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h3 style="margin-top:0">Guidance</h3>
+          <ul style="margin:0 0 12px 18px; line-height:1.6">
+            <li><b>Women:</b> Floor‑length gown or elegant midi; dressy jumpsuits.</li>
+            <li><b>Men:</b> Dark suit and tie.</li>
+            <li><b>Shoes:</b> Dress shoes or formal heels/sandals.</li>
+          </ul>
+          <div class="chips" aria-label="Helpful tags">
+            <span class="chip">Season: Autumn</span>
+            <span class="chip">Indoor venues</span>
+          </div>
+          
+          <p class="note">Feel free to wear any color you love.</p>
+          <div class="dont" style="margin-top:10px"><b>Please avoid:</b> white/ivory and overly casual items (i.e., sneakers).</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- GALLERY -->
-  <section id="gallery">
+  <section id="gallery" aria-labelledby="h-gallery">
     <div class="wrap">
-      <h2>Gallery</h2>
+      <h2 id="h-gallery">Gallery</h2>
       <p class="lead">A few moments we love.</p>
       <div class="gallery" id="galleryGrid">
-        <img src="https://github.com/Alf101010/IMAGESWEDDING/blob/main/TOKYOALINAALFREDO.jpeg?raw=true"
+        <img loading="lazy" src="https://github.com/Alf101010/IMAGESWEDDING/blob/main/TOKYOALINAALFREDO.jpeg?raw=true"
              alt="Tokyo – Alina & Alfredo" />
-        <img src="https://raw.githubusercontent.com/Alf101010/IMAGESWEDDING/refs/heads/main/ALFREDOYALINARUS.jfif"
+        <img loading="lazy" src="https://raw.githubusercontent.com/Alf101010/IMAGESWEDDING/refs/heads/main/ALFREDOYALINARUS.jfif"
              alt="Alfredo & Alina – Russia" />
-        <img src="https://github.com/Alf101010/IMAGESWEDDING/blob/main/TOKYOALINAALFREDO3.jpeg?raw=true"
+        <img loading="lazy" src="https://github.com/Alf101010/IMAGESWEDDING/blob/main/TOKYOALINAALFREDO3.jpeg?raw=true"
              alt="Tokyo – Alina & Alfredo 3" />
-        <img src="https://github.com/Alf101010/IMAGESWEDDING/blob/main/TOKYOALINAALFREDO2.jpeg?raw=true"
+        <img loading="lazy" src="https://github.com/Alf101010/IMAGESWEDDING/blob/main/TOKYOALINAALFREDO2.jpeg?raw=true"
              alt="Tokyo – Alina & Alfredo 2" />
-        <img src="https://raw.githubusercontent.com/Alf101010/IMAGESWEDDING/refs/heads/main/ALPASS.jfif"
+        <img loading="lazy" src="https://raw.githubusercontent.com/Alf101010/IMAGESWEDDING/refs/heads/main/ALPASS.jfif"
              alt="Alfredo & Alina 5" />
-        <img src="https://raw.githubusercontent.com/Alf101010/IMAGESWEDDING/refs/heads/main/ALINAALF7.jfif"
+        <img loading="lazy" src="https://raw.githubusercontent.com/Alf101010/IMAGESWEDDING/refs/heads/main/ALINAALF7.jfif"
              alt="Alina & Alfredo 7" />
       </div>
     </div>
   </section>
 
   <!-- RSVP -->
-  <section id="rsvp">
+  <section id="rsvp" aria-labelledby="h-rsvp">
     <div class="wrap rsvp">
-      <h2>RSVP</h2>
+      <h2 id="h-rsvp">RSVP</h2>
       <p class="lead">Please reply by <b>November 14, 2025</b>.</p>
 
       <div class="card" style="padding:0;">
         <div class="form-container">
           <iframe
+            title="RSVP form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSfVqn2Ia2I3TvoeAAbw0kE87uLGImG-F0Y3kfV2pHGJs7-KDA/viewform?embedded=true"
             frameborder="0" marginheight="0" marginwidth="0" loading="lazy">
             Loading…
@@ -283,24 +300,9 @@
 
   <style>
     /* Responsive Google Form */
-    .form-container {
-      position: relative;
-      max-width: 640px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    .form-container::before {
-      content: "";
-      display: block;
-      padding-top: 160%;
-    }
-    .form-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+    .form-container { position: relative; max-width: 640px; margin: 0 auto; width: 100%; }
+    .form-container::before { content: ""; display: block; padding-top: 160%; }
+    .form-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
   </style>
 
 </main>
