@@ -173,9 +173,6 @@
       <p style="margin:14px 0 0">
         <a class="cta" href="#rsvp">Reply now</a>
       </p>
-      <div class="addcal" aria-label="Add to calendar">
-  <button class="chip" type="button" onclick="addToAppleCalendar()">Add to Apple Calendar</button></div>
-    </div>
     <div class="hero-img" role="img" aria-label="Couple photo"></div>
   </div>
 </section>
@@ -320,34 +317,6 @@
   // --- Utilities
   const $ = (q,root=document)=>root.querySelector(q);
   const $$ = (q,root=document)=>Array.from(root.querySelectorAll(q));
-
-  function addToAppleCalendar(){
-  const ics = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//Alina&Alfredo//Wedding//EN',
-    'BEGIN:VEVENT',
-    'UID:alina-alfredo-2025@wedding',
-    'DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\..+/,'')+'Z',
-    'DTSTART:20251122T230000Z',
-    'DTEND:20251123T050000Z',
-    'SUMMARY:Alina & Alfredo Wedding',
-    'LOCATION:Saltillo, Mexico',
-    'DESCRIPTION:We can’t wait to celebrate with you!',
-    'END:VEVENT',
-    'END:VCALENDAR'
-  ].join('\n');
-
-  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'Alina-Alfredo-Wedding.ics';
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 5000);
-}
   // --- Year
   $("#year").textContent = new Date().getFullYear();
 
